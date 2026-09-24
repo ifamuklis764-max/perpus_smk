@@ -1,0 +1,416 @@
+/* Mengimpor font Plus Jakarta Sans untuk tampilan modern, bersih, & segar */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    /* Palet Warna Sky Blue / Light Pastel */
+    --bg-gradient: linear-gradient(135deg, #a1caff 0%, #cbe3ff 50%, #e0f2fe 100%);
+    --sidebar-bg: rgba(224, 242, 254, 0.75);
+    --card-bg: #ffffff;
+    
+    --accent-blue: #3b82f6;
+    --accent-cyan: #06b6d4;
+    --accent-red: #f43f5e;
+    --accent-green: #10b981;
+    --accent-yellow: #f59e0b;
+    
+    --text-primary: #1e293b;
+    --text-muted: #64748b;
+    --border-light: #e2e8f0;
+}
+
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Kiri - Frosted Glass Effect */
+.main-sidebar {
+    width: 250px;
+    background: var(--sidebar-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
+    min-height: 100vh;
+    color: var(--text-primary);
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo {
+    background: transparent;
+    color: var(--accent-blue);
+    padding: 24px 20px 16px 20px;
+    font-size: 22px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-panel {
+    padding: 12px 20px 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-panel .avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #bfdbfe;
+    color: var(--accent-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    border: 2px solid #ffffff;
+}
+
+.user-panel .info p {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--text-primary);
+}
+
+.user-panel .status {
+    font-size: 12px;
+    color: var(--accent-green);
+    font-weight: 600;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 10px 14px;
+}
+
+.sidebar-menu li.header {
+    padding: 10px 12px 6px 12px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 14px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+}
+
+.sidebar-menu li a:hover {
+    color: var(--accent-blue);
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar-menu li.active a {
+    color: var(--accent-blue);
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+}
+
+/* Area Konten Utama */
+.content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    background: transparent;
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.main-header a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+
+.main-header a:hover {
+    background: #ffffff;
+    color: var(--accent-red);
+}
+
+.content-header {
+    padding: 10px 30px 15px 30px;
+}
+
+.content-header h1 {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.content-header h1 small {
+    font-size: 14px;
+    color: var(--text-muted);
+    font-weight: 600;
+    margin-left: 8px;
+}
+
+.content {
+    padding: 0 30px 30px 30px;
+}
+
+/* Banner / Welcome Header Card */
+.welcome-banner {
+    background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+    border-radius: 24px;
+    padding: 24px;
+    color: #ffffff;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.15);
+}
+
+/* Stat Box Grid & Card */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px 20px -10px;
+}
+
+.col-4 {
+    width: 25%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.small-box {
+    border-radius: 20px;
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    padding: 20px;
+    background: #ffffff;
+    color: var(--text-primary);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.small-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.small-box .inner h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 2px;
+    color: var(--text-primary);
+}
+
+.small-box .inner p {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.small-box .icon {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 36px;
+    opacity: 0.15;
+    color: var(--text-primary);
+}
+
+.small-box .small-box-footer {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    background: #f0f9ff;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+/* Variasi Warna Stat Box */
+.bg-aqua .inner h3 { color: var(--accent-blue); }
+.bg-green .inner h3 { color: var(--accent-green); }
+.bg-yellow .inner h3 { color: var(--accent-yellow); }
+.bg-red .inner h3 { color: var(--accent-red); }
+
+/* Table & Container Card Utama */
+.box {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.box-header {
+    margin-bottom: 20px;
+}
+
+.box-header .box-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.actions-bar {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Tombol Custom */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 14px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-primary { 
+    background-color: var(--accent-blue); 
+    color: #ffffff; 
+}
+.btn-secondary { 
+    background-color: #ffe4e6; 
+    color: #9f1239; 
+}
+.btn-success { 
+    background-color: #d1fae5; 
+    color: #065f46; 
+}
+.btn-danger { 
+    background-color: #ffe4e6; 
+    color: #9f1239; 
+}
+.btn-warning { 
+    background-color: #fef3c7; 
+    color: #92400e; 
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Form Input & Layout Styling */
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-primary);
+    background-color: #f8fafc;
+    border: 1px solid var(--border-light);
+    border-radius: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-light);
+}
+
+/* Tabel Clean & Modern */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+table th, table td {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+table th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+table th:first-child { border-top-left-radius: 12px; border-bottom-left-radius: 12px; }
+table th:last-child { border-top-right-radius: 12px; border-bottom-right-radius: 12px; }
+
+table tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Responsive Grid */
+@media (max-width: 992px) {
+    .col-4 { width: 50%; }
+}
+@media (max-width: 576px) {
+    .col-4 { width: 100%; }
+}
